@@ -34,7 +34,7 @@ const PROJECTS: ProjectItem[] = [
       'A playful 3D personal portfolio built with React Three Fiber and GSAP, featuring a fully animated Gengar model and a glassmorphism UI for navigation.',
     tech: ['TypeScript', 'React', 'React Three Fiber', 'Three.js', 'GSAP'],
     links: [
-      { label: 'Personal Website', href: '' },
+      { label: 'Personal Website', href: 'https://lawrenceshen.vercel.app/' },
       { label: 'GitHub', href: 'https://github.com/lawrieshen/portfolio-3d' },
     ],
     image: '/images/projects/personal.png',
