@@ -35,7 +35,7 @@ const PROJECTS: ProjectItem[] = [
     tech: ['TypeScript', 'React', 'React Three Fiber', 'Three.js', 'GSAP'],
     links: [
       { label: 'Personal Website', href: '' },
-      { label: 'GitHub', href: 'https://github.com/...' },
+      { label: 'GitHub', href: 'https://github.com/lawrieshen/portfolio-3d' },
     ],
     image: '/images/projects/personal.png',
   },
