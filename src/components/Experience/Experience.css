@@ -1,0 +1,94 @@
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.experience-card {
+  background: #A29CBB01;
+  border-radius: 12px;
+  padding: 16px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* Photo area */
+.experience-media {
+  flex-shrink: 0;
+}
+
+.experience-media img {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.experience-body {
+  flex: 1;
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.experience-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.experience-company {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.experience-meta {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  display: flex;
+  gap: 6px;
+}
+
+.experience-bullets {
+  margin: 10px 0 10px;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.experience-bullets li {
+  margin-bottom: 4px;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.experience-tag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(125, 120, 163, 0.35);
+  border: 1px solid rgba(125, 120, 163, 0.6);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .experience-card {
+    flex-direction: row;
+  }
+}

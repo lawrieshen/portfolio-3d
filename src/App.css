@@ -1,0 +1,204 @@
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#root {
+  max-width: unset;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Important for clean layout */
+}
+
+.scene-canvas {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Behind the overlay */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+
+}
+
+.overlay-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  font-family: "Emblema One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.name-char {
+  display: inline-block;
+  transform-origin: bottom center;
+}
+
+.overlay-2 h1 {
+  margin-top: 30vh;
+  text-align: right;
+  color: #7D78A3;;
+  font-size: clamp(2rem, 6rem, 4.5vw);
+  letter-spacing: 0.05rem;
+}
+
+/* Glass Effect */
+.glass {
+  display: flex;
+  gap: 15px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* The key glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Navigation Bar */
+.nav-button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.nav-button:hover, .nav-button.active {
+  background: rgba(255, 255, 255, 0.7);
+  color: #7D78A3;
+  transform: translateY(-2px);
+}
+
+.content-area {
+  flex: 1; 
+  width: 100%;
+  padding: 20px 40px;
+  overflow-y: auto; 
+}
+
+.section-content {
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: background-color 0.5s ease-in-out;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 2px 4px rgba(60, 40, 120, 0.45);
+  color: #ffffff;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: rgba(255, 255, 255, 0.2);
+  overflow-y: auto;
+}
+
+.section-content p {
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-pill {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(125, 120, 163, 0.5);
+  border: 1px solid rgba(125, 120, 163, 0.4);
+  font-size: 0.85rem;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+.skills-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.skills-logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.skills-logo-strip img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.cursor-bubble {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: #7D78A3;
+  transform: translate(-50%, -50%);
+
+  animation: cursorBubbleFade 1s ease-out forwards;
+}
+
+@keyframes cursorBubbleFade {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    background: #7D78A3;
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.3);
+    background: #A29CBB;
+    opacity: 0;
+  }
+}
