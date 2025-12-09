@@ -11,7 +11,7 @@ const PROJECTS: ProjectItem[] = [
     tech: ['Swift', 'SwiftUI', 'Firebase', 'Google Places API'],
     image: '/images/projects/keen.png',
     links: [
-      { label: 'Coming Soon', href: ''}
+      { label: 'View on App Store', href: 'https://apps.apple.com/au/app/get-keen/id6748841475'}
     ]
   },
   {
