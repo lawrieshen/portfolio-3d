@@ -7,7 +7,7 @@ export const Contact = () => (
       Feel free to reach out if you’d like to chat about projects, internships, works, or anything
       3D / iOS / web dev related. You can email me at{" "}
       <a href="mailto:lawrence.cw.shen@gmail.com" className="inline-link">
-        cshe8073@uni.sydney.edu.au
+        lawrence.cw.shen@gmail.com
       </a>{" "}
       or find me on GitHub and LinkedIn below.
     </p>
